@@ -4,7 +4,7 @@ MAINTAINER Ganesh R, gradhakr@nilanet.com
 
 # Upgrade the system
 RUN yum -y upgrade
-RUN yum -y install wget
+RUN yum -y install wget tar gunzip
 
 # Download OpenJDK 8
 RUN yum -y install java-1.8.0-openjdk-devel
