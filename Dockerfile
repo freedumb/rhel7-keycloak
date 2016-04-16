@@ -34,5 +34,5 @@ RUN ./keycloak-1.9.2.Final/bin/add-user.sh -r master -u admin -p admin
 # Change perms for keycloak directory
 RUN chmod -R 777 ./keycloak-1.9.2.Final
 
-# Start the keycloak server
-CMD ["./keycloak-1.9.2.Final/bin/standalone.sh"]
+# Start the keycloak server.  Listen on all interfaces.
+CMD ["./keycloak-1.9.2.Final/bin/standalone.sh","-b","0.0.0.0"]
