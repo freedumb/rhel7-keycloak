@@ -31,5 +31,9 @@ EXPOSE 8080
 # Create the keycloak admin account
 RUN ./keycloak-1.9.2.Final/bin/add-user.sh -r master -u admin -p admin
 
+# Create server log file, assign perms
+RUN touch ./keycloak-1.9.2.Final/standalone/log/server.log && \
+    chmod -R 777 ./keycloak-1.9.2.Final
+
 # Start the keycloak server
 CMD ["./keycloak-1.9.2.Final/bin/standalone.sh"]
