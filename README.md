@@ -17,5 +17,5 @@
 
 #### Optional Steps:
 1. List all pods - oc get pods  
-2. Tail/View the log for the build/deploy pods - oc logs -f [pod ID for build or deploy pod]  
+2. Tail/View the log for the build/deploy pods - oc logs -f [Name or ID of build or deploy pod]  
 
