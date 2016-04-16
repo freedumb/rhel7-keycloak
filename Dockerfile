@@ -14,7 +14,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-openjdk
 ENV KEYCLOAK_DIR /keycloak
 
 # Download Keycloak 9.x
-RUN wget --no-cookies --no-check-certificate "http://keycloak.jboss.org/downloads/keycloak-1.9.2.Final.tar.gz" -O /tmp/keycloak.tar.gz
+RUN wget --no-cookies --no-check-certificate "http://downloads.jboss.org/keycloak/1.9.2.Final/keycloak-1.9.2.Final.tar.gz" -O /tmp/keycloak.tar.gz
 
 # Switch directory 
 WORKDIR ${KEYCLOAK_DIR}
