@@ -2,7 +2,7 @@
 ### Run Keycloak (1.9.2) within a Docker container on OpenShift Enterprise v3.x
 
 #### Instructions for deploying to OpenShift Enterprise 3.1.x
-1. Clone this git repository.  And copy the GIT URL to your GIT repo.  
+1. Clone this git repository.  And copy the GIT URL (to clipboard) to your GIT repo.  
 2. Log into OpenShift via CLI (or Web UI)  
 3. Create a new project.  
   **CLI command:** _oc new-project keycloak_   
