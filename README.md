@@ -12,7 +12,7 @@
   **CLI command:** _oc get svc_. Note down the service name. (Note: The keycloak server service listens on port 8080.)    
 6. Expose the service via a route.  
   **CLI command:** _oc expose svc [service name]_    
-7. Log into the Web UI, go to the overview tab & click on the route name. This should open a new browser tab with the keycloak server admin UI.  
+7. Log into the Web UI, go to the overview tab & click on the route name. This should open a new browser tab with the keycloak server admin UI.  User name + Password is admin/admin.
 
 
 #### Optional Steps:
