@@ -3,19 +3,35 @@
 
 #### Instructions for deploying to OpenShift Enterprise 3.1.x
 1. Clone this git repository.  And copy the GIT URL (to clipboard) to your GIT repo.  
-2. Log into OpenShift via CLI (or Web UI)  
+2. Log into OpenShift via CLI 
 3. Create a new project.  
-  **CLI command:** _oc new-project keycloak_   
+  ```
+  $ oc new-project keycloak
+  ```
 4. Next, create a new application.  
-  **CLI command:** _oc new-app [Path to GIT URL .git]_  
+  ```
+  $ oc new-app [Path to GIT URL .git] 
+  ```
 5. Get a list of all services.  
-  **CLI command:** _oc get svc_. Note down the service name. (Note: The keycloak server service listens on port 8080.)    
+  ```
+  $ oc get svc 
+  ```
+  
+  Note down the service name. (Note: The keycloak server service listens on port 8080.)    
 6. Expose the service via a route.  
-  **CLI command:** _oc expose svc [service name]_    
+  ```
+  $ oc expose svc [service name]
+  ```
 7. Log into the Web UI, go to the overview tab & click on the route name. This should open a new browser tab with the keycloak server admin UI.  User name + Password is admin/admin.
 
 
 #### Optional Steps:
-1. List all pods - oc get pods  
-2. Tail/View the log for the build/deploy pods - oc logs -f [Name or ID of build or deploy pod]  
+1. List all pods
+  ```
+  $ oc get pods
+  ``` 
+2. Tail/View the log for the build/deploy pods
+  ```
+  $ oc logs -f [Name or ID of build or deployment pod]
+  ```
 
