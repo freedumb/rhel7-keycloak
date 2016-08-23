@@ -8,7 +8,7 @@ RUN yum -y upgrade
 RUN yum -y install wget tar gunzip && yum clean all -y
 
 # Download OpenJDK 8
-RUN yum -y install java-1.8.0-openjdk-devel && yam clean all -y
+RUN yum -y install java-1.8.0-openjdk-devel && yum clean all -y
 
 # Set the Java & Keycloak Home env variables
 ENV JAVA_HOME /usr/lib/jvm/java-openjdk 
