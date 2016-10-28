@@ -13,9 +13,10 @@ RUN yum -y install java-1.8.0-openjdk-devel && yum clean all -y
 # Set the Java & Keycloak Home env variables
 ENV JAVA_HOME /usr/lib/jvm/java-openjdk 
 ENV KEYCLOAK_DIR /keycloak
+ENV KEYCLOAK_VERSION 2.3.0.Final
 
 # Download Keycloak 9.x
-RUN wget --no-cookies --no-check-certificate "http://downloads.jboss.org/keycloak/1.9.2.Final/keycloak-1.9.2.Final.tar.gz" -O /tmp/keycloak.tar.gz
+RUN wget --no-cookies --no-check-certificate "http://downloads.jboss.org/keycloak/${KEYCLOAK_VERSION}/keycloak-${KEYCLOAK_VERSION}.tar.gz" -O /tmp/keycloak.tar.gz
 
 # Switch directory 
 WORKDIR ${KEYCLOAK_DIR}
@@ -30,10 +31,10 @@ RUN export PATH=${JAVA_HOME}/bin:${PATH}
 EXPOSE 8080
 
 # Create the keycloak admin account
-RUN ./keycloak-1.9.2.Final/bin/add-user.sh -r master -u admin -p admin
+RUN ./keycloak-${KEYCLOAK_VERSION}/bin/add-user.sh -r master -u admin -p admin
 
 # Change perms for keycloak directory
-RUN chmod -R 777 ./keycloak-1.9.2.Final
+RUN chmod -R 777 ./keycloak-${KEYCLOAK_VERSION}
 
 # Start the keycloak server.  Listen on all interfaces.
-CMD ["./keycloak-1.9.2.Final/bin/standalone.sh","-b","0.0.0.0"]
+CMD ["./keycloak-${KEYCLOAK_VERSION}/bin/standalone.sh","-b","0.0.0.0"]
