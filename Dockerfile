@@ -31,7 +31,7 @@ RUN export PATH=${JAVA_HOME}/bin:${PATH}
 EXPOSE 8080
 
 # Create the keycloak admin account
-RUN ./keycloak-${KEYCLOAK_VERSION}/bin/add-user.sh -r master -u admin -p admin
+RUN ./keycloak-${KEYCLOAK_VERSION}/bin/add-user-keycloak.sh -r master -u admin -p admin
 
 # Change perms for keycloak directory
 RUN chmod -R 777 ./keycloak-${KEYCLOAK_VERSION}
