@@ -1,6 +1,6 @@
 # Run latest version of Keycloak SSO in a RHEL7 container
-# FROM rhel7
-FROM centos:7
+FROM rhel7
+# FROM centos:7
 MAINTAINER Ganesh R, gradhakr@nilanet.com
 
 # Upgrade the system
