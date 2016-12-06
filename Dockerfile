@@ -13,7 +13,7 @@ RUN yum -y install java-1.8.0-openjdk-devel && yum clean all -y
 # Set the Java & Keycloak Home env variables
 ENV JAVA_HOME /usr/lib/jvm/java-openjdk 
 ENV KEYCLOAK_DIR /keycloak
-ENV KEYCLOAK_VERSION 2.3.0.Final
+ENV KEYCLOAK_VERSION 2.4.0.Final
 
 # Download Keycloak 9.x
 RUN wget --no-cookies --no-check-certificate "http://downloads.jboss.org/keycloak/${KEYCLOAK_VERSION}/keycloak-${KEYCLOAK_VERSION}.tar.gz" -O /tmp/keycloak.tar.gz
